@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useSocket } from "../context/SocketContext";
 import Chat from "./Chat";
-import "../styles/main.css";
+import "../styles/pages/Home.css";
 
 import {
   closeTab,
@@ -110,9 +110,11 @@ const Home = () => {
         <div className="home-content">
           <div className="home-main">
             <div className="welcome-card">
-              <h1 className="welcome-title">Welcome to StrangerChat</h1>
+              <h1 className="welcome-title">
+                Welcome to StrangerChat, {currentUser.username}
+              </h1>
               <p className="welcome-subtitle">
-                Start a new chat with strangers or connect with friends
+                🎭 Ready to roll the dice on a new conversation?
               </p>
               <div className="welcome-buttons">
                 <button

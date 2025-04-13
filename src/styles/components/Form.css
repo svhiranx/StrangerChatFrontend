@@ -1,7 +1,32 @@
-/* Form Styles */
+/* Overall container for both logo and form */
+.signin-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.logo-container {
+  /* Keep the logo at the top, no matter the screen size */
+  margin-bottom: 2rem; /* Space between logo and form */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
 .form-container {
-  max-width: 400px;
-  margin: 2rem auto;
+  max-width: 480px; /* Ensure the form doesn't get too wide */
+  width: 100%; /* Allow the form to take up the available width */
   padding: 2rem;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
@@ -16,6 +41,7 @@
   font-weight: bold;
 }
 
+/* Form Styling */
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -97,4 +123,31 @@
 .form-footer {
   text-align: center;
   margin-top: 1.5rem;
-} 
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 3rem; /* Smaller logo size on smaller screens */
+  }
+
+  .form-container {
+    max-width: 100%; /* Form takes more width on smaller screens */
+    padding: 1.5rem; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 2.5rem; /* Even smaller logo size for very small screens */
+  }
+
+  .form-title {
+    font-size: 1.25rem; /* Smaller form title */
+  }
+
+  .form-input,
+  .form-button {
+    padding: 0.5rem; /* Reduce padding on small screens */
+  }
+}

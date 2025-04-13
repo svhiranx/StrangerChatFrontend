@@ -42,7 +42,6 @@ api.interceptors.response.use(
     if (error.response?.status === 401) {
       // Handle unauthorized error
       localStorage.removeItem('authToken');
-      window.location.href = '/signin';
     }
     return Promise.reject(error);
   }

@@ -198,15 +198,18 @@ const Sidepane = () => {
           </div>
         )}
         {!isMinimized && (
-          <div className="search-container">
+          <div style={{ display: "flex", alignItems: "center" }}>
             <i className="fas fa-search search-icon"></i>
-            <input
-              type="text"
-              className="search-input"
-              placeholder={`Search ${activeTab}...`}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
+
+            <div className="search-container">
+              <input
+                type="text"
+                className="search-input"
+                placeholder={`Search ${activeTab}...`}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
           </div>
         )}
       </div>
@@ -251,7 +254,8 @@ const Sidepane = () => {
         ) : (
           <>
             <button className="create-group-button" onClick={handleCreateGroup}>
-              <i className="fas fa-plus"></i> Create New Group
+              <i className="fas fa-plus"></i>{" "}
+              {!isMinimized && <p>Create New Group</p>}
             </button>
             {filteredGroups.length === 0 ? (
               <div className="no-friends-message">No groups yet</div>
@@ -267,7 +271,6 @@ const Sidepane = () => {
                   </div>
                   <div className="sidepane-info">
                     <span className="sidepane-name">{group.name}</span>
-                    <span className="sidepane-status">Group</span>
                   </div>
                   <div className="sidepane-actions">
                     <div className="dropdown">
