@@ -1,0 +1,98 @@
+:root {
+  --primary-color: #2196F3;
+  --primary-light: #21CBF3;
+  --background-dark: rgba(30, 30, 30, 0.8);
+  --text-light: rgba(255, 255, 255, 0.87);
+  --border-light: rgba(255, 255, 255, 0.1);
+  --hover-light: rgba(144, 202, 249, 0.1);
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-light);
+  background-color: #242424;
+  min-height: 100vh;
+}
+
+/* Button Styles */
+.button {
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.button:hover {
+  border-color: var(--primary-color);
+}
+
+.button:focus,
+.button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Card Styles */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* List Styles */
+.list {
+  list-style: none;
+}
+
+.list-item {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+/* Link Styles */
+.link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: var(--primary-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .navbar {
+    padding: 0 8px;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
